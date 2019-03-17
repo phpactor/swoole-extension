@@ -7,14 +7,9 @@ use Phpactor\Container\PhpactorContainer;
 use Phpactor\Extension\ClassToFile\ClassToFileExtension;
 use Phpactor\Extension\ComposerAutoloader\ComposerAutoloaderExtension;
 use Phpactor\Extension\Logger\LoggingExtension;
-use Phpactor\Extension\ReferenceFinder\ReferenceFinderExtension;
 use Phpactor\Extension\Swoole\SwooleExtension;
-use Phpactor\Extension\WorseReferenceFinder\WorseReferenceFinderExtension;
 use Phpactor\Extension\WorseReflection\WorseReflectionExtension;
 use Phpactor\FilePathResolverExtension\FilePathResolverExtension;
-use Phpactor\ReferenceFinder\DefinitionLocator;
-use Phpactor\TextDocument\ByteOffset;
-use Phpactor\TextDocument\TextDocumentBuilder;
 use Phpactor\WorseReflection\Reflector;
 
 class SwooleExtensionTest extends TestCase
