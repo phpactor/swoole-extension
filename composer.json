@@ -9,10 +9,10 @@
             "email": "daniel@dantleech.com"
         }
     ],
-
     "require": {
         "phpactor/container": "^1.0",
         "eaglewu/swoole-ide-helper": "dev-english",
+        "phpactor/worse-reflection": "~0.3",
         "phpactor/worse-reflection-extension": "~0.2"
     },
     "require-dev": {

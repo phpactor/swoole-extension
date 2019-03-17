@@ -20,12 +20,11 @@ class SwooleExtension implements Extension
     {
         $container->register('swoole.worse_reflection.stub_locator', function (Container $container) {
             $resolver = $container->get(FilePathResolverExtension::SERVICE_FILE_PATH_RESOLVER);
-            $cacheDir = $resolver->resolve($container->getParameter(WorseReflectionExtension::PARAM_STUB_CACHE_DIR));
 
             return new StubSourceLocator(
                 ReflectorBuilder::create()->build(),
-                __DIR__ . '/../vendor/eaglewu/swoole-ide-helper',
-                $cacheDir
+                $resolver->resolve('%application_root%/vendor/eaglewu/swoole-ide-helper'),
+                $resolver->resolve($container->getParameter(WorseReflectionExtension::PARAM_STUB_CACHE_DIR))
             );
         }, [ WorseReflectionExtension::TAG_SOURCE_LOCATOR => []]);
     }
