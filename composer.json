@@ -13,7 +13,8 @@
         "phpactor/container": "^1.0",
         "eaglewu/swoole-ide-helper": "dev-english",
         "phpactor/worse-reflection": "~0.3",
-        "phpactor/worse-reflection-extension": "~0.2"
+        "phpactor/worse-reflection-extension": "~0.2",
+        "phpactor/extension-manager-extension": "~0.8"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.11.4",

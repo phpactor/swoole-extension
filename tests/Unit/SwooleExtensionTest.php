@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use Phpactor\Container\PhpactorContainer;
 use Phpactor\Extension\ClassToFile\ClassToFileExtension;
 use Phpactor\Extension\ComposerAutoloader\ComposerAutoloaderExtension;
+use Phpactor\Extension\ExtensionManager\ExtensionManagerExtension;
 use Phpactor\Extension\Logger\LoggingExtension;
 use Phpactor\Extension\Swoole\SwooleExtension;
 use Phpactor\Extension\WorseReflection\WorseReflectionExtension;
@@ -23,8 +24,10 @@ class SwooleExtensionTest extends TestCase
             ComposerAutoloaderExtension::class,
             LoggingExtension::class,
             SwooleExtension::class,
+            ExtensionManagerExtension::class,
         ], [
             'file_path_resolver.application_root' => __DIR__ . '/../..',
+             ExtensionManagerExtension::PARAM_EXTENSION_VENDOR_DIR => __DIR__ . '/../../vendor',
         ]);
 
         $reflector = $container->get(WorseReflectionExtension::SERVICE_REFLECTOR);
